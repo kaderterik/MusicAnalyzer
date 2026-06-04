@@ -26,13 +26,6 @@ E-posta adresiniz geliştirici paneline eklendikten sonra uygulamaya giriş yapa
 
 ---
 
-## 📸 Ekran Görüntüleri
-
-![Ana Sayfa](screenshots/anasayfa.png)
-![Analiz Ekranı](screenshots/analiz.png)
-
----
-
 ## ✨ Özellikler
 
 ### 🎨 Müzikal Aura Analizi
