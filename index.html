@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0a0a0a" />
+    <title>Müzik Kişiliği Analizi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app">
+      <div class="topbar">
+        <div class="brand" aria-label="Uygulama">
+          <div class="brandMark">MA</div>
+          <div class="brandText">
+            <strong>Müzik Analizi</strong>
+            <span>Spotify ile kişilik keşfi</span>
+          </div>
+        </div>
+
+        <button
+          id="themeToggle"
+          class="themeBtn"
+          type="button"
+          aria-label="Tema değiştir"
+        >
+          <span id="themeIcon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- LANDING -->
+      <section id="landingView" class="view">
+        <div class="hero">
+          <div class="heroCard">
+            <div class="heroGlow"></div>
+            <div class="bgMotion" aria-hidden="true">
+              <div class="notes" id="notesLayer"></div>
+            </div>
+
+            <h1 class="heroTitle">Müziğin Seni Anlatıyor</h1>
+            <p class="heroSub">Spotify verilerinle müzik kişiliğini keşfet</p>
+
+            <div class="heroActions">
+              <button id="loginBtn" class="spotifyBtn" type="button">
+                <span class="spotifyBtnIcon" aria-hidden="true">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                      stroke="var(--accent)"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M7.5 10.5C10.5 9.5 13.5 9.8 16.5 11"
+                      stroke="var(--accent)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M8.5 13.5C11 12.8 13.3 13 15.7 14"
+                      stroke="var(--accent)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M9.5 16C11.5 15.5 13.2 15.7 14.8 16.6"
+                      stroke="var(--accent)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                Spotify ile Giriş Yap
+              </button>
+            </div>
+          </div>
+
+          <div class="featuresRow" aria-label="Özellikler">
+            <div class="featureCard">
+              <div class="featureIcon" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 21s-7-4.35-7-11a7 7 0 0 1 14 0c0 6.65-7 11-7 11Z"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+              <div class="featureText">
+                <strong>Kişilik Analizi</strong>
+                <span>Türlerden skorlar çıkar</span>
+              </div>
+            </div>
+            <div class="featureCard">
+              <div class="featureIcon" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 19V5"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M8 19V11"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M12 19V8"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M16 19V13"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M20 19V6"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="featureText">
+                <strong>Top Sanatçılar</strong>
+                <span>En çok dinlenenler</span>
+              </div>
+            </div>
+            <div class="featureCard">
+              <div class="featureIcon" aria-hidden="true">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21 7c-5.5 0-10 2-10 7s4.5 7 10 7"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M3 17c0-5 4-10 10-10"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div class="featureText">
+                <strong>Müzik Tarzın</strong>
+                <span>Genres dağılımı</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ANALYSIS -->
+      <section id="analysisView" class="view hidden" aria-live="polite">
+        <div class="analysisWrap">
+          <div
+            id="profileCard"
+            class="card cardInner profileBar reveal"
+            data-reveal
+          >
+            <div class="profileLeft">
+              <div class="avatar" aria-hidden="true">
+                <img id="profileImg" alt="Profil fotoğrafı" />
+              </div>
+              <div class="profileMeta">
+                <div id="profileName" class="profileName">—</div>
+                <div id="profileSub" class="profileSub">Spotify profili</div>
+              </div>
+            </div>
+            <div class="actionsRight">
+              <button id="shareBtn" class="btn btnPrimary" type="button">
+                Sonuçları Paylaş
+              </button>
+              <button id="logoutBtn" class="btn btnDanger" type="button">
+                Çıkış
+              </button>
+            </div>
+          </div>
+
+          <div class="analysisGrid">
+            <!-- Müzikal Aura Premium Component -->
+            <div
+              id="auraCard"
+              class="card spanAll reveal"
+              style="
+                position: relative;
+                overflow: hidden;
+                min-height: 380px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 48px 24px;
+                text-align: center;
+              "
+              data-reveal
+            >
+              <!-- Moving Aura Blobs in Background -->
+              <div class="aura-bg">
+                <div id="auraBlob1" class="aura-blob blob-1"></div>
+                <div id="auraBlob2" class="aura-blob blob-2"></div>
+                <div id="auraBlob3" class="aura-blob blob-3"></div>
+              </div>
+
+              <!-- Content Overlay -->
+              <div
+                class="aura-content"
+                style="
+                  position: relative;
+                  z-index: 2;
+                  max-width: 600px;
+                  width: 100%;
+                "
+              >
+                <div
+                  style="
+                    font-size: 13px;
+                    font-weight: 800;
+                    letter-spacing: 3px;
+                    color: var(--muted);
+                    text-transform: uppercase;
+                    margin-bottom: 12px;
+                  "
+                >
+                  MÜZİKAL AURAN
+                </div>
+                <h2
+                  id="auraName"
+                  style="
+                    font-size: clamp(28px, 5vw, 44px);
+                    font-weight: 900;
+                    letter-spacing: -1px;
+                    margin-bottom: 18px;
+                    color: var(--text);
+                  "
+                >
+                  —
+                </h2>
+                <p
+                  id="auraDesc"
+                  style="
+                    font-size: 15.5px;
+                    line-height: 1.65;
+                    color: var(--muted);
+                    font-weight: 500;
+                    margin-bottom: 0;
+                    max-width: 520px;
+                    margin-inline: auto;
+                  "
+                >
+                  —
+                </p>
+              </div>
+
+              <!-- Genre Descriptions Sub-Section -->
+              <div
+                id="genreDetailsSection"
+                class="hidden"
+                style="
+                  position: relative;
+                  z-index: 2;
+                  width: 100%;
+                  border-top: 1px solid var(--border);
+                  margin-top: 36px;
+                  padding-top: 32px;
+                  text-align: left;
+                "
+              >
+                <h3
+                  style="
+                    font-size: 13px;
+                    font-weight: 800;
+                    letter-spacing: 2.5px;
+                    color: var(--text);
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    opacity: 0.95;
+                  "
+                >
+                  DİNLEDİĞİN TARZLARIN ANLAMLARI
+                </h3>
+                <div
+                  id="genreDetailsList"
+                  style="
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 16px;
+                    max-width: 800px;
+                    margin-inline: auto;
+                  "
+                >
+                  <!-- Dynamically populated genre descriptions -->
+                </div>
+              </div>
+            </div>
+
+            <div class="duoRow reveal" data-reveal>
+              <div class="card cardInner">
+                <div class="cardHeader">
+                  <div>
+                    <h2>En çok dinlenen 5 sanatçı</h2>
+                    <p>Fotoğraflı kartlar</p>
+                  </div>
+                </div>
+                <div id="topArtistsGrid" class="artistsGrid"></div>
+              </div>
+
+              <div class="card cardInner">
+                <div class="cardHeader">
+                  <div>
+                    <h2>En çok dinlenen 5 şarkı</h2>
+                    <p>Liste halinde</p>
+                  </div>
+                </div>
+                <ul id="topTracksList" class="tracksList"></ul>
+              </div>
+            </div>
+
+            <!-- Genre Chart Card -->
+            <div
+              id="chartCard"
+              class="card spanAll reveal"
+              style="
+                padding: 28px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              "
+              data-reveal
+            >
+              <div
+                style="
+                  text-align: center;
+                  width: 100%;
+                  margin-bottom: 24px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 6px;
+                "
+              >
+                <h2
+                  style="
+                    font-size: 18px;
+                    font-weight: 950;
+                    margin: 0;
+                    color: var(--text);
+                  "
+                >
+                  Müzik Tarzı Dağılımın
+                </h2>
+                <p
+                  style="
+                    font-size: 13.5px;
+                    color: var(--muted);
+                    margin: 0;
+                    font-weight: 700;
+                  "
+                >
+                  Dinlediğin müziklerin tarzlarına göre oranları
+                </p>
+              </div>
+              <div
+                style="
+                  position: relative;
+                  height: 320px;
+                  width: 100%;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <canvas
+                  id="genreChart"
+                  style="max-width: 440px; max-height: 290px"
+                ></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <canvas id="confetti" class="hidden" aria-hidden="true"></canvas>
+
+    <div
+      id="loadingOverlay"
+      class="overlay hidden"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="overlayCard">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <div class="spinner" aria-hidden="true"></div>
+          <div>
+            <div id="loadingTitle" class="overlayTitle">
+              Analiz yapılıyor...
+            </div>
+            <div id="loadingSub" class="overlaySub">
+              Spotify verileri hazırlanıyor
+            </div>
+          </div>
+        </div>
+        <div class="overlayBar"><i></i></div>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" role="alert"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
