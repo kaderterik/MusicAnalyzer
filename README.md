@@ -219,22 +219,6 @@ MusicAnalyzer/
 
 ---
 
-## 🌟 Gelecek Geliştirmeler
-
-- Daha detaylı müzik istatistikleri
-- Spotify Wrapped benzeri yıllık özetler
-- Kullanıcılar arası müzik uyumluluğu karşılaştırması
-- Daha fazla aura ve kişilik kategorisi
-- Çoklu dil desteği
-
----
-
-## 📄 Lisans
-
-Bu proje MIT Lisansı ile lisanslanmıştır.
-
----
-
 <p align="center">
 🎧 Spotify verilerinle müzik kişiliğini keşfet, müzikal auranı ortaya çıkar!
 </p>
