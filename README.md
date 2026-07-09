@@ -5,6 +5,7 @@ Spotify dinleme alışkanlıklarınızı analiz ederek müzikal karakterinizi, f
 🌐 **Canlı Uygulama Netlify:** https://musicaanalyzer.netlify.app/
 
 🌐 **Canlı Uygulama Github:** https://kaderterik.github.io/MusicAnalyzer/
+
 ---
 
 ## 🎯 Proje Hakkında
