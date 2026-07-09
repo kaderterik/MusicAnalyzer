@@ -2,8 +2,9 @@
 
 Spotify dinleme alışkanlıklarınızı analiz ederek müzikal karakterinizi, favori sanatçılarınızı, en çok dinlediğiniz şarkıları ve müzik zevkinizin genel profilini keşfetmenizi sağlayan modern bir web uygulaması.
 
-🌐 **Canlı Uygulama:** https://musicaanalyzer.netlify.app/
+🌐 **Canlı Uygulama Netlify:** https://musicaanalyzer.netlify.app/
 
+🌐 **Canlı Uygulama Github:** https://kaderterik.github.io/MusicAnalyzer/
 ---
 
 ## 🎯 Proje Hakkında
